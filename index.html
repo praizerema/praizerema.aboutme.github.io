@@ -20,7 +20,7 @@
                     </button>
       
                   
-                    <div class="navbar-collapse collapse show" id="collapsibleNavbar">
+                    <div class="navbar-collapse collapse" id="collapsibleNavbar">
                       <ul class="navbar-nav ml-auto ">
                         <li class="nav-item">
                           <a class="nav-link" href="#home">Home</a>
@@ -37,26 +37,28 @@
                       </ul>
                     </div>
                   </nav>
-                 <img class="imager" src="img/Background1.jpg" alt="">
-                 <section class="" id="home">
-              <div class="imageDiv"><div class="aniDiv"><h1 class="aniH1">Hello!</h1>
-            <h4 class="anih4">My name is Praise</h4>
-        <p class="aniP">Welcome to my Portfolio</p></div></div>
+                 <img class="imager" src="img/background2.jpg" alt="">
+                 <div class="contentWrap col-12">
+                    <section class="" id="home">
+                        <div class="imageDiv"><div class="aniDiv"><h1 class="aniH1">Hello!</h1>
+                      <h4 class="anih4">My name is Praise</h4>
+                  <p class="aniP">Welcome to my Portfolio</p></div></div>
+              </section>
+    <section class="" id="about">
+        <h1 class="col-12 text-center mb-5">About Me</h1>
+        <div  class="row px-5">
+        <div class="col-lg-5 col-md-6 ">
+             <img class="image" src="img/praiz.jpg" alt="">
+        </div>
+        <div class="col-lg-7 col-md-6 mt-4 mb-5">
+            <div class="introDiv">PraiseGod Ayodele | Frontend Developer</div>
+            <div class="bodyDiv">I am a Frontend Developer based in Lagos, Nigeria. I design websites and web applications using JavaScript, HTML and CSS.
+                I learn much about through Start.ng and my Slack ID is praizerema.
+                I'm from Kogi State and July 20th is my birthday. My Hobbies include coding, cooking. <wbr>
+           
+            </div></div>
+        </div>
     </section>
-        <section class="row px-5" id="about">
-            <h1 class="col-12 text-center mb-5">About Me</h1>
-            <div class="col-lg-5 col-md-6 ">
-                 <img class="image" src="img/praiz.jpg" alt="">
-            </div>
-            <div class="col-lg-7 col-md-6 mt-4">
-                <div class="introDiv">PraiseGod Ayodele | Frontend Developer</div>
-                <div class="bodyDiv">I am a Frontend Developer based in Lagos, Nigeria. I design websites and web applications using JavaScript, HTML and CSS.
-                    I learn much about through Start.ng and my Slack ID is praizerema.
-                    I'm from Kogi State and July 20th is my birthday. My Hobbies include coding, cooking. <wbr>
-               
-                </div>
-            </div>
-        </section>
         <section class="row px-5" id="projects">
             <h1 class="col-sm-12 text-center">My Projects</h1>
             <div class="col-lg-2 col-md-4   p-2 mb-5" ><div class="mx-3 p-3 card">
@@ -168,13 +170,21 @@
             <p class="text-center" style="color: #fff;">Copyright © 2020</p>
         </footer>
             </div>
-      
+        </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
          @media only screen and (max-width: 600px) {
+            li>a:hover{
+    border-bottom: none !important;
+   
+}
+section{
+    /* height: 1500px !important; */
+    padding-top: 50px !important;
+}
     .bodyWrap {
         padding: 10px !important;
         padding-top: 20px !important;
@@ -232,6 +242,7 @@ form{
     position: fixed !important;
     top: 0;
     left: 0;
+    
 }
   }
 
@@ -309,22 +320,15 @@ border-radius: 6px;
 nav{
     background-color: #fff;
 }
-.contactwrap{
-    background-color: rgba(0, 0, 0, 0.7) !important;   
-    /* background-color: red !important;    */
+/* .contactwrap, .sectionHome, .abtDiv{
+    background-color: rgba(0, 0, 0, 0.7) !important;  
     z-index: 1000;
-}
+} */
 .card{
     background-color: rgba(0, 0, 0, 0.7) !important;
 
 }
-.imageDiv{
-    /* background-image: url(img/unnamed.jpg); */
-    background-size: 100% 100%!important ;
-    height: 500px;
-    /* opacity: 0.6; */
-     
-}
+
 .imager{
     min-height: 100%;
     min-width: 1024px;
@@ -333,6 +337,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
+  
 }
 
         body{
@@ -387,6 +392,7 @@ a:hover{
 }
 h1{
     padding-top: 30px;
+    margin-bottom: 0 !important;
 }
 form{
     width: 250px;
@@ -444,5 +450,17 @@ footer{
 /* .formDiv , form{
     margin: auto !important
 } */
+section{
+    min-height: 800px !important;
+    padding-top: 50px !important;
+}
+.contentWrap{
+    background-color: rgba(0, 0, 0, 0.7) !important;
+
+   /* width: 100% !important;
+   height: auto; */
+
+}
     </style>
+   
 </html>
