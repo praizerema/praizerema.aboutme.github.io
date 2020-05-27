@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Ayodele PraiseGod</title>
+        <title>particle</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
@@ -10,9 +10,11 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700" rel="stylesheet">
     </head>
-    <body >
-       
-            <div class="">
+    <body>
+  <canvas class="background"></canvas>
+  <script src="particles.js-master/dist/particles.min.js"></script>
+
+   <div class="">
                 <nav class="navbar navbar-expand-lg  navbar-light sticky-top homeHead  py-3">
                     <a class="navbar-brand mx-3" href="#home"><div class="font-weight-bold logohead">Praizerema</div></a>
                     <button class="navbar-toggler mx-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="true" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
@@ -37,7 +39,6 @@
                       </ul>
                     </div>
                   </nav>
-                 <img class="imager" src="img/background2.jpg" alt="">
                  <div class="contentWrap col-12">
                     <section class="" id="home">
                         <div class="imageDiv"><div class="aniDiv"><h1 class="aniH1">Hello!</h1>
@@ -65,23 +66,23 @@
                 <a href="https://praizerema.github.io/signup.github.io/">
                     <h4>Sign Up</h4>
                     <img src="img/signup.png" class="image-proj" alt="">
-                    <div>This is a Replica of the Piggy Bank signup Page.</div>
+                    <div>Vanilla JavaScript, HTML and CSS</div>
                     </a>
             </div></div>
             <div class="col-lg-2 col-md-4  p-2 mb-5"> <div class="mx-3 p-3 card">
                 <a href="https://praizerema.github.io/signup.github.io/">
                     <h4>Fash Mall</h4>
                     <img src="img/realshop.png" class="image-proj" alt="">
-                    <div>This is a Replica of the Piggy Bank signup Page.</div>
+                    <div>React, Redux, CSS, Bootstrap, Firebase</div>
                     </a>
             </div>
             </div>
             <div class="col-lg-2 col-md-4 p-2 mb-5">
                 <div class="mx-3 p-3 card">
                     <a href="https://praizerema.github.io/praizerema.quiz.github.io/">
-                        <h4>Sign Up</h4>
-                        <img src="img/signup.png" class="image-proj" alt="">
-                        <div>This is a Replica of the Piggy Bank signup Page.</div>
+                        <h4>Quiz Game</h4>
+                        <img src="img/quizimg.png" class="image-proj" alt="">
+                        <div>Vanilla JavaScript, HTML and CSS</div>
                         </a>
                 </div>
             </div>
@@ -119,7 +120,7 @@
                 <h3 class="col-12 text-center">What do you say?</h3>
                 <div class="col-lg-4 col-md-6 text-center mt-5">
                     <div class="my-4">Ayodele PraiseGod</div>
-                    <div class="my-4"><a href="mailto">eremapraiz@gmail.com</a></div>
+                    <div class="my-4"><a href="mailto:eremapraiz@gmail.com">eremapraiz@gmail.com</a></div>
                     <div class="my-4">Lagos, Nigeria</div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-5 text-center">
@@ -166,87 +167,62 @@
 </div>
 </div>
         </section>
-        <footer class="footer col-12 py-3">
+        <footer class="footer col-12">
             <p class="text-center" style="color: #fff;">Copyright © 2020</p>
         </footer>
             </div>
         </div>
-    </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <style>
-         @media only screen and (max-width: 600px) {
-            li>a:hover{
-    border-bottom: none !important;
-   
-}
-section{
-    /* height: 1500px !important; */
-    padding-top: 50px !important;
-}
-    .bodyWrap {
-        padding: 10px !important;
-        padding-top: 20px !important;
-        overflow-x: hidden !important;
-
+</html>
+<script>
+var particles = Particles.init({
+	selector: '.background',
+  color: ['#b406e9', '#404B69'],
+  connectParticles: true,
+  responsive: [{
+  	breakpoint: 800,
+    options: {
+    	color: '#FF1493',
+    	maxParticles: 80,
+      connectParticles: false
     }
-    .image{
-    height: 400px !important;
-    width: 100% !important;
-    margin-bottom: 20px !important;
-    margin: auto !important;
-    margin-right: 0px !important;
-    border-top-right-radius: 30px !important;
-    border-top-left-radius: 30px !important;
-    border-bottom-right-radius: 0px !important;
+  }]
+});
+</script>
+<style>
+html, body { height: 100% }
+
+body {
+  background: linear-gradient(160deg, #320241 0%, rgb(32, 18, 39) 60%);
+  color: #fff !important;
 
 }
+/* background: linear-gradient(160deg, # 0%, rgb(32, 18, 39) 60%); */
 
-.introDiv{
-    font-size: 1.05rem !important;
-    font-weight: bold;
-    line-height: 1;
-
+h1 {
+  text-align: center;
 }
 
-.bodyDiv{
-    font-size: 1.2rem !important;
-   text-align: justify !important;
-   margin-top: 20px !important;
-    
-}
-body{
-           color: #fff;
-            line-height: 1.8;
-            font-family: Arial, Helvetica, sans-serif !important;
-            overflow-x: hidden !important;
-
-        }
-        .formdiv{
-    margin-top: 20px !important;
-    margin: auto !important;
-    padding: 20px !important;
-}
-form{
-   
-    margin: auto !important;
-    border-radius: 14px !important;
-  
-}
-.imager{
-    /* min-height: 1000px !important; */
-    min-width: 400px !important;
-    width:100% !important;
-    height: auto !important;
-    position: fixed !important;
+.background {
+    min-height: 100%;
+    min-width: 1024px;
+    width:100%;
+    height: auto;
+    position: fixed;
     top: 0;
     left: 0;
-    
+    color: #fff !important;
+  /* z-index: -1; */
 }
-  }
 
-  .aniH1{
+
+
+
+
+.aniH1{
   /* width: 100px;
   height: 100px; */
   position: relative;
@@ -340,17 +316,17 @@ nav{
   
 }
 
-        body{
+        /* body{ */
     /* background-image: url(img/Background1.jpg);
     background-size: 100% 100%!important ; */
     
             /* background-image: linear-gradient(160deg, #240310 0%, rgb(14, 8, 8) 60%); */
-            color: #fff;
+            /* color: #fff;
             line-height: 1.2;
             font-size: 15px;
             font-family: 'Josefin Sans', sans-serif;
             font-weight: 300
-        }
+        } */
    
 .image{
     height: 400px;
@@ -386,8 +362,8 @@ a{
     color:rgb(219, 218, 218);
 }
 a:hover{
-    /* font-size: 1.2rem;
-    color: rgb(3, 114, 3); */
+    /* font-size: 1.2rem; */
+    color:#db9db6;
     text-decoration: none;
 }
 h1{
@@ -417,7 +393,7 @@ margin-bottom: 7px;
 .btn-submit{
 margin-top: 5px;
 padding: 10px;
-background-color: #350116;
+background-color: rgb(53, 4, 50);
 border-radius: 4px;
 color: #fff;
 cursor: pointer;
@@ -441,10 +417,14 @@ label{
 }
 li>a:hover{
     border-bottom: 3px solid rgb(238, 20, 220);
-   
+}
+li>a{
+   font-weight: bold !important;
 }
 footer{
     background-color: rgb(53, 4, 50) !important;
+    min-width: 1024px !important;
+
     /* rgb(61, 4, 58) */
 }
 /* .formDiv , form{
@@ -461,6 +441,4 @@ section{
    height: auto; */
 
 }
-    </style>
-   
-</html>
+</style>
