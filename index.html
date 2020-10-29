@@ -1,87 +1,334 @@
 <html>
     <head>
         <title>Meet me</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        />
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700" rel="stylesheet">
-    </head>
-    <body class="container-fluid m-0 p-0">
-  <canvas class="background"></canvas>
-  <script src="particles.js-master/dist/particles.min.js"></script>
-
-   <div class="">
-                <nav class="navbar navbar-expand-lg  navbar-light sticky-top homeHead  py-3">
-                        <a class="navbar-brand mx-3" href="#home"><div class="font-weight-bold logohead">
-                        <img class="image1" src="img/praiz.jpg" alt="">
-                            
-                          <span class="pl-2">Praizerema</span>   
-                            
-                        </div>
-                    </a>
-                    <button class="navbar-toggler mx-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="true" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
+        <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,400i,500,500i,700,700i,900|Salsa&amp;display=swap" rel="stylesheet">
+    <style>
       
-                  
-                    <div class="navbar-collapse collapse" id="collapsibleNavbar">
-                      <ul class="navbar-nav ml-auto ">
+        .background {
+            min-height: 100%;
+            min-width: 1024px;
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: #fff !important;
+        }
+        body {
+            /* background: linear-gradient(160deg, rgb(3, 0, 3) 0%, rgb(109, 108, 108)); */
+            background: linear-gradient(160deg, #320241 0%, rgb(32, 18, 39) 60%);
+            color: #fff !important;
+            font-family: Salsa !important;
+            font-size: 13px;
+        }
+       
+        #home,
+        #projects,
+        #about,
+        #contact {
+            height: 100% !important;
+            padding: 150px 0;
+            margin-top: 0;
+    height: auto !important;
+            position: relative;
+        }
+        #about{
+            background-color: rgba(207, 193, 205, 0.336);
+        }
+        nav {
+            background-color: rgb(231, 205, 236);
+        }
+        /* rgb(96, 6, 114) */
+        .cardshadow {
+            width: 300px;
+            min-height: 300px;
+            background-color: rgba(207, 193, 205, 0.336);
+            box-shadow: 0 30px 40px rgba(253, 251, 253, 0.2);
+            margin: auto;
+        }
+        .font-35 {
+            font-size: 2.2rem
+        }
+        .font-20 {
+            font-size: 1.3rem
+        }
+        .font-25 {
+            font-size: 1.6rem
+        }
+        .bar {
+      background-color: #f2f2f1;
+      width: 100%;
+      height: 10px;
+      margin-bottom: 40px;
+      }
+     
+     h3 {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 15px;
+      color: #f6fdff;
+      margin: 0 0 20px 0;
+    }
+    
+    .bar-inner {
+      background-color: #2ecc71 !important;
+      width: 0%;
+      height: 100%;
+      position: relative;
+      transition: width 2000ms linear !important;
+    }
+    
+    .bar-inner:after {
+      position: absolute;
+      right: 2.5%;
+      content: attr(data-percent);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 30px;
+    }
+    .image-proj{
+        width: 100% !important;
+        height: 100px !important;
+        margin: auto !important;
+    }
+    .formdiv{
+        margin-top: 160px;
+        margin: auto !important ;
+    }
+    
+    a{
+        text-decoration: none;
+        color:rgb(219, 218, 218);
+    }
+    a:hover{
+        color:#db9db6;
+        text-decoration: none;
+    }
+    form{
+        width: 250px;
+        max-height: 100%;
+        background-color: #fff;
+        padding: 20px;
+        margin: auto;
+        border-top-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+      
+    }
+    input, textarea{
+        width: 100% !important;
+        padding: 8px !important;
+        border: none !important;
+    border-radius: 2px !important;
+    background-color: rgb(224, 221, 221) !important;
+    outline: none !important;
+    margin-bottom: 7px;
+        
+    }
+    .btn-submit{
+    margin-top: 5px;
+    padding: 10px;
+    background-color: rgb(53, 4, 50);
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    outline: none !important;
+    
+    }
+    .btn-submit:hover{
+        background-color: #084713;  
+        font-size: 1rem;
+        color: #fff;
+    }
+    footer{
+        background-color: rgb(53, 4, 50) !important;
+        min-width: 100% !important;
+    
+    }
+    .image1{
+        width: 50px;
+        height: 50px;
+    border-radius: 50%
+    }
+    @media only screen and (max-width: 600px) {
+        .font-35{
+            font-size: 22px !important;
+        }
+        .font-20{
+            font-size: 16px !important;
+        }
+        .cardshadow{
+            font-size: 14px !important;
+    padding: 3rem 1.5rem !important;
+        }
+        form{
+        width: 100% !important;
+        max-height: 100%;
+        background-color: #fff;
+        padding: 20px;
+        margin: auto;
+        border-top-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+      
+    }
+    }
+    
+    </style>
+    
+    
+    </head>
+    <body class="container-fluid px-0">
+        <canvas class="background"></canvas>
+        <div>
+            <nav class="navbar navbar-expand-lg  navbar-light fixed-top homeHead  py-2">
+                <a class="navbar-brand mx-3" href="#">
+                    <div
+                        class="font-weight-bold logohead">
+                        <img class="image1" src="https://media-exp1.licdn.com/dms/image/C4E03AQFnpbgNiR3_GQ/profile-displayphoto-shrink_400_400/0?e=1609372800&v=beta&t=OgQ6fbq_Pdt4tRIXdZXI8utc-kj3ycphhWnF0KlH_K8" alt="">
+
+                        <span class="pl-2">Praizerema</span>
+
+                    </div>
+                </a>
+                <button class="navbar-toggler mx-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="true" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="navbar-collapse collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto ">
                         <li class="nav-item">
-                          <a class="nav-link" href="#home">Home</a>
+                            <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#projects">Projects</a>
+                            <a class="nav-link" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
-                          </li>
-                      </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="contentwrap">
+                <section name="" id="home">
+                    <div class="container">
+                        <div class="row mx-0">
+                            
+                            <div class="col-lg-6 col-sm-12 col-md-6">
+                                <div class="  text-center mb-5" style="vertical-align: middle;">
+                                    <div id="introname" class="font-35 font-weight-bold  mt-5 pt-5"></div>
+                                    <div id="introabout" class=" font-20 font-weight-bold "></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12 col-md-6 cardshadow font-20 p-5">
+                                <div>I am a  Software Engineer with focus on frontend development and QA testing. 
+                                   React is my favorite javascript liberary when building user interfaces and i do a lot of 
+                                    Manual testing too. <br>My soft skills include;
+                                      Problem Solving, Attention to Detail, Multitasking, Team working, effective communication
+                                       Creativity, Attention to Detail. <br>
+                                    Over the last two years, i have actively been involved in building websites and applications. One of such is
+                                     <a href="https:seerbit.com" target="_blank">Seerbit</a> a payment system in use today.
+                                    </div>
+                                       <div>Feel free to contact me if you require my service or have questions.</div>
+                            </div>
+                        </div>
                     </div>
-                  </nav>
-                 <div class="contentWrap col-12 px-0">
-                    <section class="" id="home">
-                        <div class="imageDiv"><div class="aniDiv text-center"><h1 class="aniH1">Hello!</h1>
-                            <h2 class="aniP ">My name is Praise</h3>
-                            <h3 class="anih4 ">Welcome to my Portfolio</h4>
-                  </div></div>
-              </section>
-    <section class="" id="about">
-        <h1 class="section-title col-12 text-center mb-5">ABOUT ME</h1>
-        <div  class="row px-5">
-       
-        <div class="col-lg-12 col-md-6 mt-4 mb-5">
-            <div class="introDiv">PraiseGod Ayodele | Frontend Developer</div>
-            <div class="bodyDiv"> I am a goal-oriented Frontend Developer with strong commitment to collaboration and solution-oriented problem-solving. Use various web design tools to develop customer-focused websites and designs. Committed to high standards of web design, user experience, usability and speed for multiple types of end-users. .
-                I also love meeting people and learning new things. I tend to be curious most times, and i always strive to improve on my skill.
-                I focus on solving day to day problems with coding.
-                I am familiar with HTML, CSS, JavaScript, React, firebase, Sass,Bootstrap
-                I'm always learning and seeking to improve myself. I also like meeting new people so don't hestitate to reach our for whatever reason <wbr>
-           
-            </div>
-       
-        </div>
-        </div>
-    </section>
-        <section class="px-5" id="projects">
-            <h1 class="section-title col-sm-12 mb-5 text-center">MY PROJECTS</h1>
+                </section>
+                <section name="" id="about">
+                    <div class="container"><div class="font-35 text-center mb-5">ABOUT</div>
+                <div class="row mx-0">
+                    <div class="col-lg-6 col-md-6 col-sm-12 font-20 " style="align-self: center;">
+                        <div class=" " style="align-self: center; align-items: center; ">
+                         <div class="mb-3"><span class="font-weight-bold mr-4">Name:</span> <span>Ayodele PraiseGod</span>  </div>
+                        <div class="mb-3"> <span class="font-weight-bold mr-4">Address:</span> <span>Lagos, Nigeria</span> </div>
+                        <div class="mb-3"> <span class="font-weight-bold mr-4">Hobbies:</span> <span>Swimming</span> </div>   
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="row  font-20 mx-auto  "  style="align-self: center;">
+                        <div class="font-25 mb-3 col-12">Services</div>
+                           
+                            <div> <div class="pr-3">
+                                <div><img src="/img/codeblue.png" alt="" class="" width="100" height="80"></div><div>Web Development</div> </div>
+                                
+                            </div>
+                            <div> <div class="pl-3"> 
+                                <div><img src="/img/bugfinder.jpeg" alt="" width="100" height="80"></div><div>QA Testing</div> </div>
+
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-12 font-20 text-center my-5 pt-3">Technologies</div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+<div>
+   
+    <div class="pb-3"><h3>JavaScript</h3>
+    <div class="bar">
+      <div class="bar-inner bar-90" data-percent="75%"></div>
+    </div></div>
+    <div><h3>HTML & CSS</h3>
+    <div class="bar">
+      <div class="bar-inner bar-80" data-percent="85%"></div>
+    </div>
+    </div>
+    <div><h3>SQL</h3>
+    <div class="bar">
+      <div class="bar-inner bar-90" data-percent="40%"></div>
+    </div></div>
+   
+   
+</div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+<div class="">
+
+    <div> <h3>React</h3>
+        <div class="bar">
+          <div class="bar-inner bar-80" data-percent="70%"></div>
+        </div></div>
+    <div> <h3>Redux</h3>
+        <div class="bar">
+          <div class="bar-inner bar-80" data-percent="60%"></div>
+        </div></div>
+    <div> <h3>node Js</h3>
+        <div class="bar">
+          <div class="bar-inner bar-80" data-percent="40%"></div>
+        </div></div>
+    <div> <h3>Firebase</h3>
+        <div class="bar">
+          <div class="bar-inner bar-80" data-percent="50%"></div>
+        </div></div>
+
+
+</div>
+                        </div>
+                </div>
+                </div>
+                </section>
+                <section name="" id="projects">
+                    <div class="container">
+                    <div class="font-35 text-center mb-5">MY PROJECTS</div>
             <div class="row">  
             <div class="col-lg-2 col-md-4   p-2 mb-5" ><div class="mx-3 p-3 card">
                 <a href="https://praizerema.github.io/signup.github.io/">
-                    <h4>Sign Up</h4>
+                    <h5>Sign Up</h5>
                     <img src="img/signup.png" class="image-proj" alt="">
                     <div> HTML and CSS</div>
                     </a>
             </div></div>
             <div class="col-lg-2 col-md-4  p-2 mb-5"> <div class="mx-3 p-3 card">
                 <a href="http://fashionmall-withpraiz.surge.sh/">
-                    <h4>Fashion Mall</h4>
+                    <h5>Fashion Mall</h5>
                     <img src="img/realshop.png" class="image-proj" alt="">
                     <div>React, Redux, CSS, Bootstrap, Firebase</div>
                     </a>
@@ -90,7 +337,7 @@
             <div class="col-lg-2 col-md-4 p-2 mb-5">
                 <div class="mx-3 p-3 card">
                     <a href="https://praizerema.github.io/praizerema.quiz.github.io/">
-                        <h4>Quiz Game</h4>
+                        <h5>Quiz Game</h5>
                         <img src="img/quizimg.png" class="image-proj" alt="">
                         <div>Vanilla JavaScript, HTML and CSS</div>
                         </a>
@@ -99,7 +346,7 @@
             <div class="col-lg-2 col-md-4 p-2 mb-5">
                 <div class="mx-3 p-3 card">
                     <a href="https://praizerema.github.io/praizerema.calculator.github.io/">
-                        <h4>Calculator</h4>
+                        <h5>Calculator</h5>
                         <img src="img/calculator.png" class="image-proj" alt="">
                         <div>Vanilla JavaScript, HTML and CSS</div>
                         </a>
@@ -108,287 +355,125 @@
             <div class="col-lg-2 col-md-4 p-2 mb-5">
                 <div class="mx-3 p-3 card">
                     <a href="https://praizerema.github.io/praizerema-count_down_timer/">
-                        <h4>Count Down Timer</h4>
+                        <h5>Count Down Timer</h5>
                         <img src="img/coutdown.png" class="image-proj" alt="">
                         <div>Vanilla JavaScript, HTML and CSS</div>
                         </a>
                 </div>
             </div>
-            
-        </section>
-        <section class= "mt-4" id="contact">
-                <h1 class="section-title col-12 text-center mb-5">CONTACT</h1>
+        </div>
+                </section>
+                <section name="" id="contact">
+                    <div class="container">
+                    <div class="font-35 text-center mb-5">GET IN TOUCH</div>
 
-            <div class="contactwrap row col-12 py-5"> 
-                <div class="col-lg-4 col-md-6 text-center mt-5">
-                    <div class="my-4">Ayodele PraiseGod</div>
-                    <div class="my-4"><a href="mailto:eremapraiz@gmail.com">eremapraiz@gmail.com</a></div>
-                    <div class="my-4">Lagos, Nigeria</div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-5 text-center">
-                   <div class="my-3"><a href="https://twitter.com/ayodelepraisego" class="c-green no-decor mx-2">
-                        <i class="fab fa-twitter fa-2x mr-2" ></i>
-                        Twitter
-                    </a></div> 
-                    <div class="my-3">
-                        <a href="https://github.com/praizerema" class="c-green no-decor mx-2">
-                            <i class="fab fa-github fa-2x mr-2"></i>
-                            Github
-                        </a>
-                    </div>
-                    <div class="my-3">
-                        <a href="https://www.linkedin.com/in/praizerema" class="c-green no-decor mx-2">
-                          <i class="fab fa-linkedin-in mr-2"></i>
-                            Linkedin
-                        </a>
-                       
-                    </div>
-                </div>
-
-<div class="col-lg-4 col-md-6">
-    <div class="formdiv text-center">
-
-        <h3 class="mb-3">Leave a message</h3>
-                <form
-                action="https://formspree.io/mpzjeoyv"
-                method="POST"
-              >
-              <div class="form-group">
-                <input class="form-control" type="text" name="name" placeholder="Name" required></div>
-                <div class="form-group">
-                  <input class="form-control" type="text" name="_replyto" placeholder="Enter email" required></div>
-                
-                  <div class="form-group">
-                  <textarea class="from-control" name="message" placeholder="Message" required></textarea></div>
-                
-              <div class="text-right">
-                <button type="submit" class="btn btn-submit">Send</button></div>
-              </form>
-</div>
-</div> </div>
-        </section>
+                    <div class=" row col-12 pb-5 mx-0"> 
+                        <div class="col-lg-4 col-md-6 col-sm-12 text-center ">
+                            <div class="mb-4">Ayodele PraiseGod</div>
+                            <div class="my-4"><a href="mailto:eremapraiz@gmail.com">eremapraiz@gmail.com</a></div>
+                            <div class="my-4">Lagos, Nigeria</div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-5 col-sm- 12 text-center">
+                           <div class="my-3"><a href="https://twitter.com/ayodelepraisego" class="c-green no-decor mx-2">
+                                <i class="fab fa-twitter fa-2x mr-2" ></i>
+                                Twitter
+                            </a></div> 
+                            <div class="my-3">
+                                <a href="https://github.com/praizerema" class="c-green no-decor mx-2">
+                                    <i class="fab fa-github fa-2x mr-2"></i>
+                                    Github
+                                </a>
+                            </div>
+                            <div class="my-3">
+                                <a href="https://www.linkedin.com/in/praizerema" class="c-green no-decor mx-2">
+                                  <i class="fab fa-linkedin-in mr-2"></i>
+                                    Linkedin
+                                </a>
+                               
+                            </div>
+                        </div>
         
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="formdiv text-center">
+        
+                <h3 class="mb-3">Leave a message</h3>
+                        <form
+                        action="https://formspree.io/mpzjeoyv"
+                        method="POST"
+                      >
+                      <div class="form-group">
+                        <input class="form-control" type="text" name="name" placeholder="Name" required></div>
+                        <div class="form-group">
+                          <input class="form-control" type="text" name="_replyto" placeholder="Enter email" required></div>
+                        
+                          <div class="form-group">
+                          <textarea class="from-control" name="message" placeholder="Message" required></textarea></div>
+                        
+                      <div class="text-right">
+                        <button type="submit" class="btn btn-submit">Send</button></div>
+                      </form>
+        </div>
+        </div> </div>
+    </div>
+
+                </section>
             </div>
             <footer class="footer py-4 text-center" style="color: #fff;">
-                    Copyright © 2020
-                 </footer>
+                Praizerema 2020
+             </footer>
         </div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="particles.js-master/dist/particles.min.js"></script>
 </html>
+
 <script>
-var particles = Particles.init({
-	selector: '.background',
-  color: ['#b406e9', '#404B69'],
-  connectParticles: true,
-  responsive: [{
-  	breakpoint: 800,
-    options: {
-    	color: '#FF1493',
-    	maxParticles: 80,
-      connectParticles: false
-    }
-  }]
-});
+     (function(document) {
+  var _bars = [].slice.call(document.querySelectorAll('.bar-inner'));
+  _bars.map(function(bar, index) {
+    setTimeout(function() {
+    	bar.style.width = bar.dataset.percent;
+    }, index * 1000);
+    
+  });
+})(document)
+    var particles = Particles.init({
+        selector: '.background',
+        color: [
+            '#b406e9', '#404B69'
+        ],
+        connectParticles: true,
+        responsive: [
+            {
+                breakpoint: 800,
+                options: {
+                    color: '#FF1493',
+                    maxParticles: 80,
+                    connectParticles: false
+                }
+            }
+        ]
+    });
+    var h3 = document.getElementById('introabout');
+    console.log("here")
+    var typewriter = new Typewriter(h3, {loop: true});
+
+    typewriter.pauseFor(4000).typeString('A Software Engineer').pauseFor(2500).deleteAll().typeString('My soft skills include; problem solving').pauseFor(2500).deleteChars(15).typeString('creativity').pauseFor(2500).deleteChars(10).typeString('attention to detail').pauseFor(2500).deleteChars(19).typeString('multitasking').pauseFor(2500).deleteAll().typeString('I can be of help if you want to; Build a Web Application').pauseFor(2500).deleteChars(23).typeString('or').pauseFor(2500).deleteChars(2).typeString('Search and Kill bugs in your application').pauseFor(2500).start();
+
+    var intro = document.getElementById('introname');
+    console.log("here")
+    var typewriter = new Typewriter(intro, {
+        loop: false,
+        cursor: ""
+
+    });
+
+    typewriter.typeString('HI, I am PraiseGod Ayodele.').stop().start()
+   
 </script>
-<style>
-     @media only screen and (max-width: 600px) {
-            li>a:hover{
-    border-bottom: none !important;
-   
-}
-section{
-    padding-top: 50px !important;
-}
-.section-title{
-    margin-bottom: 10px !important;
-    font-size:2rem
-
-}
-.introDiv{
-    font-size: 1.1rem !important;
-    margin-bottom: 15px
-}
-.bodyDiv{
-    font-size: 0.9rem !important;
-    
-}
-.formdiv{
-    margin-top: 160px;
-    margin: auto !important ;
-    width: 300px;
-  
-}
-
-     }
-
-html, body { height: 100% }
-
-body {
-  background: linear-gradient(160deg, #320241 0%, rgb(32, 18, 39) 60%);
-  color: #fff !important;
-
-}
-
-
-h1 {
-  text-align: center;
-}
-
-.background {
-    min-height: 100%;
-    min-width: 1024px;
-    width:100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    color: #fff !important;
-}
-.homeHead {
-    width: 100% !important;
-    
-  }
-  .image-proj{
-    width: 100% !important;
-    height: 100px !important;
-    margin: auto !important;
-}
-.card1>div{
-width: 80% !important;
-background-color: rgb(7, 7, 7) !important;
-height: 310px !important;
-border-radius: 6px;
-}
-nav{
-    background-color: #fff;
-}
-
-.card{
-    background-color: rgba(0, 0, 0, 0.7) !important;
-
-}
-
-.imager{
-    min-height: 100%;
-    min-width: 1024px;
-    width:100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-  
-}
-
-   
-
-.formdiv{
-    margin-top: 160px;
-    margin: auto !important ;
-}
-
-.introDiv{
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 1;
-
-}
-.bodyDiv{
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin-bottom: 40px;
-    text-align: justify !important;
-width: 50%;
-align-self: center;
-}
-
-a{
-    text-decoration: none;
-    color:rgb(219, 218, 218);
-}
-a:hover{
-    color:#db9db6;
-    text-decoration: none;
-}
-form{
-    width: 250px;
-    max-height: 100%;
-    background-color: #fff;
-    padding: 20px;
-    margin: auto;
-    border-top-left-radius: 14px;
-    border-bottom-right-radius: 14px;
-  
-}
-input, textarea{
-    width: 100% !important;
-    padding: 8px !important;
-    border: none !important;
-border-radius: 2px !important;
-background-color: rgb(224, 221, 221) !important;
-outline: none !important;
-margin-bottom: 7px;
-    
-}
-.btn-submit{
-margin-top: 5px;
-padding: 10px;
-background-color: rgb(53, 4, 50);
-border-radius: 4px;
-color: #fff;
-cursor: pointer;
-font-weight: 700;
-outline: none !important;
-
-}
-.btn-submit:hover{
-    background-color: #084713;  
-    font-size: 1rem;
-    color: #fff;
-}
-
-.logohead{
-    color: rgb(238, 20, 220);
-    font-size: 19px;
-    
-}
-li>a:hover{
-    border-bottom: 3px solid rgb(238, 20, 220);
-}
-li>a{
-   font-weight: bold !important;
-}
-footer{
-    background-color: rgb(53, 4, 50) !important;
-    min-width: 100% !important;
-
-}
-
-section{
-    min-height: 800px !important;
-    padding-top: 100px !important;
-}
-.contentWrap{
-    background-color: rgba(0, 0, 0, 0.7) !important;
-}
-
-h1, h2, h3{
-    margin-bottom: 150px !important
-}
-.image1{
-    width: 50px;
-    height: 50px;
-border-radius: 50%
-}
-.section-title{
-    margin-bottom: 30px !important
-
-}
-</style>
-
-
 
 
 
