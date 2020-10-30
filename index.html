@@ -230,13 +230,14 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-md-6 cardshadow font-20 p-5">
-                                <div>I am a  Software Engineer with focus on frontend development and QA testing. 
-                                   React is my favorite javascript liberary when building user interfaces and i do a lot of 
+                                <div>I am a  Software Engineer with focus on frontend and QA testing. 
+                                   React is my favorite javascript library when building UI's and i do a lot of 
                                     Manual testing too. <br>My soft skills include;
-                                      Problem Solving, Attention to Detail, Multitasking, Team working, effective communication
+                                      Problem Solving, Attention to Detail, Multitasking, Team working, Effective communication
                                        Creativity, Attention to Detail. <br>
                                     Over the last two years, i have actively been involved in building websites and applications. One of such is
                                      <a href="https:seerbit.com" target="_blank">Seerbit</a> a payment system in use today.
+                                     
                                     </div>
                                        <div>Feel free to contact me if you require my service or have questions.</div>
                             </div>
@@ -461,7 +462,11 @@
     console.log("here")
     var typewriter = new Typewriter(h3, {loop: true});
 
-    typewriter.pauseFor(4000).typeString('A Software Engineer').pauseFor(2500).deleteAll().typeString('My soft skills include; problem solving').pauseFor(2500).deleteChars(15).typeString('creativity').pauseFor(2500).deleteChars(10).typeString('attention to detail').pauseFor(2500).deleteChars(19).typeString('multitasking').pauseFor(2500).deleteAll().typeString('I can be of help if you want to; Build a Web Application').pauseFor(2500).deleteChars(23).typeString('or').pauseFor(2500).deleteChars(2).typeString('Search and Kill bugs in your application').pauseFor(2500).start();
+    typewriter.pauseFor(4000).typeString('A Software Engineer').pauseFor(2500).deleteAll()
+    .typeString('My soft skills include problem solving').pauseFor(2500).deleteChars(15).typeString('creativity')
+    .pauseFor(2500).deleteChars(10).typeString('attention to detail')
+    .pauseFor(2500).deleteChars(19).typeString('multitasking')
+    .pauseFor(2500).deleteAll().typeString('Do not hesitate to contact me for a project').start();
 
     var intro = document.getElementById('introname');
     console.log("here")
